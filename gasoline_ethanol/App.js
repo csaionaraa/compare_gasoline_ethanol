@@ -45,7 +45,7 @@ export default function App() {
           onChangeText={(value) => setEtanol(value)}
           keyboardType='numeric'>
         </TextInput>
-        <Text style={styles.button} onPress={calcular}>calcular</Text>
+        <Text style={styles.button} onPress={calcular}>CALCULAR</Text>
         </View>
         <View style={styles.resultContainer}>
           <Text style={styles.result}>{resultado}</Text>
@@ -64,16 +64,40 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: 16,
+    color:'white',
+    textAlign: 'center',
+    fontWeight: 'bold',
+  },
+  inputContainer:{
+    marginBottom: 30
+  },
+  input:{
+    height: 50,
+    width: 200,
+    borderWidth: 0.8,
+    marginBottom: 15,
+    marginTop: 10,
+    border: 'none',
+    borderBottomColor: 'white',
     color: 'white',
-    textAlign: 'center'
+    textAlign: 'center',
   },
   button:{
-    color:'black',
-    backgroundColor:'white',
-    fontSize: 20,
-    alignItems: ' center',
-    justicyContent: 'center',
-    padding: '16',
-    borderRadius: 8
-  }
+    backgroundColor: 'white',
+    color: 'black',
+    padding: 15,
+    borderRadius: 6,
+    textAlign: 'center'
+  }, 
+  result: {
+    color: 'white'
+  },
+  resultContainer:{
+    alignItems:'center'
+  },
+  image: {
+    width: 100,
+    height: 100,
+    marginTop: 30,
+  },
 });
